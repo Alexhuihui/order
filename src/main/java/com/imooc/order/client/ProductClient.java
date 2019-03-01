@@ -1,0 +1,14 @@
+package com.imooc.order.client;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+/**
+ * @author 汪永晖
+ */
+@FeignClient(name = "product")
+public interface ProductClient {
+
+    @GetMapping("/msg")
+    String productMsg();
+}
